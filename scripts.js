@@ -1,18 +1,24 @@
 
-
+//array of "minute" names
 var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock']
+// update() function to set all classes to "dimmed" and highlighted when the current time = class
+// first part sets all hour elements dimmed/highlighted
 var run = function update(){
+//current time
+    var today = new Date();
+    var h = "hour_" + today.getHours();
+    var m = today.getMinutes();
+
     for(var i = 1; i <= 12; i++){
         var id = "hour_" + i;
         document.getElementById(id).className= "dimmed";
     }
+    //loops trough "minutes" and sets classes ((POSSIBLY REFACTORABLE))
     wordsArr.forEach(function(word) {
         document.getElementById(word).className= "dimmed";
     })
-    var today = new Date();
-    var h = "hour_" + today.getHours();
-    var m = today.getMinutes();
-    document.getElementById(h).className= "highlighted";
+    //sets hour to highlighted
+        document.getElementById(h).className= "highlighted";
 
     if(0 <= m && 5 > m){
         document.getElementById('five').className= "highlighted";
