@@ -8,3 +8,13 @@ h1{
     height: 100%;
     background-color: grey;
 }
+
+span {
+  letter-spacing: 30px;
+  font-size: 80px;
+  font-family: "Lucida Console";
+}
+
+br {
+  line-height: 30px;
+}
