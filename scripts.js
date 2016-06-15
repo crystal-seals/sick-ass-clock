@@ -6,7 +6,7 @@ var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock']
 var run = function update(){
 //current time
     var today = new Date();
-    var h = 'hour_' + (today.getHours() % 12 || 12);  
+    var h = 'hour_' + (today.getHours() % 12 || 12);
     // //hours work with 24h time
     // if(today.getHours() > 12){
     //     h = "hour_" + (today.getHours() - 12);
@@ -31,8 +31,7 @@ var run = function update(){
         document.getElementById(h).className= "highlighted";
 
     if(0 <= m && 5 > m){
-        document.getElementById('five').className= "highlighted";
-        document.getElementById('past').className= "highlighted";
+        document.getElementById('oclock').className= "highlighted";
     }
 
     else if(4 < m && m < 10){
