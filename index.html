@@ -3,15 +3,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>Sick Ass Clock</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
 </head>
 <body>
     <h1>Word clock</h1>
     <div class="wrapper">
-        <span class="highlighted">IT IS</span>
+        <span class="highlighted">IT</span><span>L</span><span class="highlighted">IS</span><
     </div>
   <script src="scripts.js"></script>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
+  <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+  <script src="test.js"></script>
 </body>
 </html>
