@@ -85,7 +85,7 @@ var run = function update(){
         document.getElementById('to').className= "highlighted";
     }
     console.log("running");
-    var remainderMinutes = (m + 2.416666) % 5;
+    var remainderMinutes = (m + 2.4) % 5;
     var secondsPassed = (remainderMinutes * 60) + s;
     if (secondsPassed > 150) {
       secondsPassed = 300 - secondsPassed;
