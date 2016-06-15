@@ -1,19 +1,19 @@
 
 //array of "minute" names
-var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock']
+var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock', 'to']
 // update() function to set all classes to "dimmed" and highlighted when the current time = class
 // first part sets all hour elements dimmed/highlighted
 var run = function update(){
 //current time
     var today = new Date();
-    var h = 'hour_' + (today.getHours() % 12 || 12);
-    // //hours work with 24h time
-    // if(today.getHours() > 12){
-    //     h = "hour_" + (today.getHours() - 12);
-    // }else{
-    //     "hour_" + (today.getHours());
-    // }
-    var m = today.getMinutes();
+    var htest = today.getHours();
+    var mtest = today.getMinutes();
+    var h = (htest % 12 || 12);
+    if (mtest > 30) {
+        h = h + 1;
+    }
+    h = "hour_" + h;
+    var m = mtest;
 
     for(var i = 1; i <= 12; i++){
         var id = "hour_" + i;
