@@ -8,7 +8,9 @@ var run = function update(){
     var today = new Date();
     var h = today.getHours() % 12 || 12;
     var m = today.getMinutes();
-    if (m > 30){
+    //hour changes too soon to talk about the next one so just changed this bit so
+    //if minutes are > 35 thats next hour
+    if (m > 34){
         h = h + 1;
     }
     h = "hour_" + h
