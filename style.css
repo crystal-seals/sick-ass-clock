@@ -1,4 +1,6 @@
-
+body{
+    overflow: hidden;
+}
 h1{
     text-align: center;
 }
@@ -19,20 +21,21 @@ h1{
     background-size: cover;
     animation: animatedBackground 70s linear infinite;
     animation-direction: alternate;
-    position: fixed;
+    position: absolute;
     overflow: hidden;
     z-index: -1;
+
 }
 
 #pattern{
-	background:rgba(0,0,0,0.15) url(pattern.png);
-	padding-top:100px;
-  background-repeat: repeat;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
+    background:rgba(0,0,0,0.15) url(pattern.png);
+    padding-top:100px;
+    background-repeat: repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 
 .wrapper{
