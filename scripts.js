@@ -1,19 +1,20 @@
 
 //array of "minute" names
-var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock', 'to']
+var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock']
 // update() function to set all classes to "dimmed" and highlighted when the current time = class
 // first part sets all hour elements dimmed/highlighted
 var run = function update(){
 //current time
     var today = new Date();
-    var htest = today.getHours();
-    var mtest = today.getMinutes();
-    var h = (htest % 12 || 12);
-    if (mtest > 30) {
-        h = h + 1;
-    }
-    h = "hour_" + h;
-    var m = mtest;
+    var h = 'hour_' + (today.getHours() % 12 || 12);
+    // //hours work with 24h time
+    // if(today.getHours() > 12){
+    //     h = "hour_" + (today.getHours() - 12);
+    // }else{
+    //     "hour_" + (today.getHours());
+    // }
+    var m = today.getMinutes();
+    var s = today.getSeconds();
 
     for(var i = 1; i <= 12; i++){
         var id = "hour_" + i;
@@ -84,6 +85,14 @@ var run = function update(){
         document.getElementById('to').className= "highlighted";
     }
     console.log("running");
+    var remainderMinutes = (m + 2.416666) % 5;
+    var secondsPassed = (remainderMinutes * 60) + s;
+    if (secondsPassed > 150) {
+      secondsPassed = 300 - secondsPassed;
+    }
+    var fraction = secondsPassed / 300;
+    var middle = "0,0,0," + (0.15 + fraction);
+    document.getElementById('pattern').style.background = "rgba(" + middle + ") url(pattern.png)";
 }
 
 setInterval(run, 1000);
