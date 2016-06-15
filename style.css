@@ -18,6 +18,7 @@ h1{
     background-repeat: repeat-x;
     background-size: cover;
     animation: animatedBackground 70s linear infinite;
+    animation-direction: alternate;
     position: fixed;
     overflow: hidden;
     z-index: -1;
