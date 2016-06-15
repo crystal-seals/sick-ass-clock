@@ -24,7 +24,7 @@ h1{
 }
 
 #pattern{
-	background:rgba(0,0,0,0.25) url(pattern.png);
+	background:rgba(0,0,0,0.15) url(pattern.png);
 	padding-top:100px;
   background-repeat: repeat;
   position: absolute;

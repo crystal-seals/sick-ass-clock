@@ -6,7 +6,13 @@ var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock']
 var run = function update(){
 //current time
     var today = new Date();
-    var h = "hour_" + today.getHours();
+    var h = 'hour_' + (today.getHours() % 12 || 12);  
+    // //hours work with 24h time
+    // if(today.getHours() > 12){
+    //     h = "hour_" + (today.getHours() - 12);
+    // }else{
+    //     "hour_" + (today.getHours());
+    // }
     var m = today.getMinutes();
 
     for(var i = 1; i <= 12; i++){
@@ -17,6 +23,10 @@ var run = function update(){
     wordsArr.forEach(function(word) {
         document.getElementById(word).className= "dimmed";
     })
+    if(h > 12){
+        h -= 12
+    };
+    console.log(h)
     //sets hour to highlighted
         document.getElementById(h).className= "highlighted";
 
