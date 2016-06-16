@@ -130,4 +130,7 @@ br {
   .wrapper {
     margin: 0;
   }
+  br {
+      line-height: 0;
+  }
 }
