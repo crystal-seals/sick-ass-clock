@@ -1,9 +1,6 @@
 body{
     overflow: hidden;;
 }
-h1{
-    text-align: center;
-}
 
 @keyframes animatedBackground {
 	from { background-position: 0 0; }
@@ -40,9 +37,13 @@ h1{
 
 .wrapper{
     text-align: center;
-    margin: auto;
-    width: 66%;
     padding-top: 20px
+}
+
+.align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 span {
@@ -115,4 +116,13 @@ br {
   left: 5px;
   -webkit-filter: invert(100%);
   filter: invert(100%);
+}
+
+@media (max-width: 420px) {
+  span {
+    letter-spacing: 0;
+  }
+  .wrapper {
+    margin: 0;
+  }
 }
