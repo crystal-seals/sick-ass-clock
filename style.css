@@ -6,6 +6,10 @@ body{
 	from { background-position: 0 0; }
 	to { background-position: 100% 0; }
 }
+@-webkit-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
 
 #background {
     left: 0px;
@@ -19,6 +23,8 @@ body{
     background-size: cover;
     animation: animatedBackground 70s linear infinite;
     animation-direction: alternate;
+    -webkit-animation: animatedBackground 70s linear infinite;
+    -webkit-animation-direction: alternate;
     position: absolute;
     overflow: hidden;
     z-index: -1;
