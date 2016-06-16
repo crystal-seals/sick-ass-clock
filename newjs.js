@@ -95,3 +95,17 @@ var run = function update(){
 }
 
 setInterval(run, 1000);
+
+var number = 1;
+
+document.getElementById("changeBackground").addEventListener("click", function changeImage() {
+  number ++;
+  if (number === 3) {
+    number = 1;
+  }
+  document.getElementById('background').style.backgroundImage = "url(" + number + ".jpg)";
+  document.getElementById('changeBackground').className = "button";
+  setTimeout(function(){
+    document.getElementById('changeBackground').className = "cog";
+  }, 500);
+});
