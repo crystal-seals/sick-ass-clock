@@ -15,6 +15,7 @@ function updateTime(){
 function correctHours(inputh, inputm){
     if (m > 34){
         h = h + 1;
+        h = h % 12 || 12;
     }
     if (inputm > 34){
         return inputh = inputh + 1;
@@ -80,7 +81,6 @@ function updateBackground() {
   }
   var middle = "0,0,0," + (0.8 - (fraction * 0.6));
   document.getElementById('pattern').style.background = "rgba(" + middle + ") url(pattern.png)";
-  console.log(secondsPassed, (0.8 - fraction))
 }
 
 var run = function update(){
