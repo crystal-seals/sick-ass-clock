@@ -92,15 +92,36 @@ var run = function update(){
     highlightHour();
     setClock();
     updateBackground();
+    console.log("running")
 }
 
-setInterval(run, 1000);
+var interval = setInterval(run, 1000);
 
+//Secret function that reveals names by pressing x
+document.getElementById("ex").addEventListener("click", function secretEx() {
+    clearInterval(interval);
+    document.getElementById('sofia').className = 'highlighted';
+    document.getElementById('rich').className = 'highlighted';
+    document.getElementById('it').className = 'dimmed';
+    document.getElementById('is').className = 'dimmed';
+    dimHours();
+    dimMinutes();
+    setTimeout(function() {
+        document.getElementById('it').className = 'highlighted';
+        document.getElementById('is').className = 'highlighted';
+        document.getElementById('sofia').className = 'dimmed';
+        document.getElementById('rich').className = 'dimmed';
+
+        interval = setInterval(run, 1000);
+    }, 3000)
+});
+
+// Backround image change by pressing the cog
 var number = 1;
 
 document.getElementById("changeBackground").addEventListener("click", function changeImage() {
   number ++;
-  if (number === 3) {
+  if (number === 9) {
     number = 1;
   }
   document.getElementById('background').style.backgroundImage = "url(" + number + ".jpg)";
