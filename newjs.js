@@ -1,12 +1,14 @@
 var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock', 'to']
 var h;
 var m;
+var s;
 
 function updateTime(){
     var today = new Date();
-     h = today.getHours() % 12 || 12;
-     m = today.getMinutes();
-     return h + ":" + m
+    h = today.getHours() % 12 || 12;
+    m = today.getMinutes();
+    s = today.getSeconds();
+    return h + ":" + m
 
 }
 
@@ -69,6 +71,18 @@ function setClock(){
     }
 }
 
+function updateBackground() {
+  var remainderMinutes = m % 5;
+  var secondsPassed = (remainderMinutes * 60) + s;
+  var fraction = (secondsPassed) / 300;
+  if (secondsPassed > 150) {
+    fraction = (300 - (secondsPassed)) / 300;
+  }
+  var middle = "0,0,0," + (0.8 - (fraction * 0.6));
+  document.getElementById('pattern').style.background = "rgba(" + middle + ") url(pattern.png)";
+  console.log(secondsPassed, (0.8 - fraction))
+}
+
 var run = function update(){
     updateTime();
     correctHours(h,m);
@@ -77,6 +91,7 @@ var run = function update(){
     dimMinutes();
     highlightHour();
     setClock();
+    updateBackground();
 }
 
 setInterval(run, 1000);
