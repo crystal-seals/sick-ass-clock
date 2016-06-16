@@ -1,6 +1,5 @@
-
 //array of "minute" names
-var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock']
+var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock', 'to']
 // update() function to set all classes to "dimmed" and highlighted when the current time = class
 // first part sets all hour elements dimmed/highlighted
 var run = function update(){
