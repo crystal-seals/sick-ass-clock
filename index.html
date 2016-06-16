@@ -6,27 +6,33 @@
   <title>Sick Ass O'clock</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <div id="background"></div>
-  <div id="pattern"></div>
-    <div class="wrapper">
-        <span id="it" class="highlighted">IT</span><span class="dimmed">L</span><span id="is" class="highlighted">IS</span><span class="dimmed">ASTIME</span><br>
-        <span class="dimmed">AC</span><span class="dimmed" id="quarter">QUARTER</span><span class="dimmed">DC</span><br>
-        <span class="dimmed" id="twenty">TWENTY</span><span class="dimmed" id="five">FIVE</span><span class="dimmed">X</span><br>
-        <span class="dimmed" id="half">HALF</span><span class="dimmed">B</span><span class="dimmed" id="ten">TEN</span><span class="dimmed">F</span><span class="dimmed" id="to">TO</span><br>
-        <span class="dimmed" id="past">PAST</span><span class="dimmed">ERU</span><span class="dimmed" id="hour_9">NINE</span><br>
-        <span class="dimmed" id="hour_1">ONE</span><span class="dimmed" id="hour_6">SIX</span><span class="dimmed" id="hour_3">THREE</span><br>
-        <span class="dimmed" id="hour_4">FOUR</span><span class="dimmed" id="hour_5">FIVE</span><span class="dimmed" id="hour_2">TWO</span><br>
-        <span class="dimmed" id="hour_8">EIGHT</span><span class="dimmed" id="hour_11">ELEVEN</span><br>
-        <span class="dimmed" id="hour_7">SEVEN</span><span class="dimmed" id="hour_12">TWELVE</span><br>
-        <span class="dimmed" id="hour_10">TEN</span><span class="dimmed">SE</span><span id="oclock" class="dimmed">OCLOCK</span><br>
+    <div class="align">
+        <div id="pattern">
+            <div class="wrapper">
+                <span id="it" class="highlighted">IT</span><span class="dimmed">L</span><span id="is" class="highlighted">IS</span><span class="dimmed">A</span><span id="sofia" class="dimmed">SOFIA</span><br>
+                <span class="dimmed" id="quarter">QUARTER</span><span id="rich" class="dimmed">RICH</span><br>
+                <span class="dimmed" id="twenty">TWENTY</span><span class="dimmed" id="five">FIVE</span><span class="dimmed">X</span><br>
+                <span class="dimmed" id="half">HALF</span><span class="dimmed">B</span><span class="dimmed" id="ten">TEN</span><span class="dimmed">F</span><span class="dimmed" id="to">TO</span><br>
+                <span class="dimmed" id="past">PAST</span><span class="dimmed">ERU</span><span class="dimmed" id="hour_9">NINE</span><br>
+                <span class="dimmed" id="hour_1">ONE</span><span class="dimmed" id="hour_6">SI<span id="ex">X</span></span><span class="dimmed" id="hour_3">THREE</span><br>
+                <span class="dimmed" id="hour_4">FOUR</span><span class="dimmed" id="hour_5">FIVE</span><span class="dimmed" id="hour_2">TWO</span><br>
+                <span class="dimmed" id="hour_8">EIGHT</span><span class="dimmed" id="hour_11">ELEVEN</span><br>
+                <span class="dimmed" id="hour_7">SEVEN</span><span class="dimmed" id="hour_12">TWELVE</span><br>
+                <span class="dimmed" id="hour_10">TEN</span><span class="dimmed">SE</span><span id="oclock" class="dimmed">OCLOCK</span><br>
+            </div>
+        </div>
     </div>
-  <script src="scripts.js"></script>
-  <div id="qunit"></div>
+</div>
+<img id="changeBackground" class="cog" src="cog.png" >
+  <script src="newjs.js"></script>
+  <!-- <div id="qunit"></div>
   <div id="qunit-fixture"></div>
   <script src="test.js"></script>
-  <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
-  <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+
+  <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script> -->
 </body>
 </html>

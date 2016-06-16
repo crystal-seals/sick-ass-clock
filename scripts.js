@@ -1,19 +1,19 @@
-
 //array of "minute" names
-var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock']
+var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock', 'to']
 // update() function to set all classes to "dimmed" and highlighted when the current time = class
 // first part sets all hour elements dimmed/highlighted
 var run = function update(){
 //current time
     var today = new Date();
-    var h = 'hour_' + (today.getHours() % 12 || 12);
-    // //hours work with 24h time
-    // if(today.getHours() > 12){
-    //     h = "hour_" + (today.getHours() - 12);
-    // }else{
-    //     "hour_" + (today.getHours());
-    // }
+    var h = today.getHours() % 12 || 12;
     var m = today.getMinutes();
+    //hour changes too soon to talk about the next one so just changed this bit so
+    //if minutes are > 35 thats next hour
+    if (m > 34){
+        h = h + 1;
+    }
+    h = "hour_" + h
+
     var s = today.getSeconds();
 
     for(var i = 1; i <= 12; i++){
@@ -84,11 +84,11 @@ var run = function update(){
         document.getElementById('five').className= "highlighted";
         document.getElementById('to').className= "highlighted";
     }
-    console.log("running");
-    var remainderMinutes = (m + 2.4) % 5;
+// Fades background image
+    var remainderMinutes = (m + 2.5) % 5;
     var secondsPassed = (remainderMinutes * 60) + s;
     if (secondsPassed > 150) {
-      secondsPassed = 300 - secondsPassed;
+      secondsPassed = 299 - secondsPassed;
     }
     var fraction = secondsPassed / 300;
     var middle = "0,0,0," + (0.15 + fraction);
