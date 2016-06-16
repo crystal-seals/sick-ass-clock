@@ -1,5 +1,5 @@
 body{
-    overflow: hidden;;
+    overflow: hidden;
 }
 
 @keyframes animatedBackground {
@@ -120,7 +120,7 @@ br {
 
 @media (max-width: 420px) {
   span {
-    letter-spacing: 0;
+    letter-spacing: 1.5vw;
   }
   .wrapper {
     margin: 0;
