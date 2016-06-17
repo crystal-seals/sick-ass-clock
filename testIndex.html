@@ -4,15 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>Sick Ass O'clock</title>
-  <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body style="overflow: visible;">
   <div id="background"></div>
     <div class="align">
         <div id="pattern">
-            <div class="wrapper">
+            <div class="wrapper" style="display: none;">
                 <span id="it" class="highlighted">IT</span><span class="dimmed">L</span><span id="is" class="highlighted">IS</span><span class="dimmed">A</span><span id="sofia" class="dimmed">STIME</span><br>
                 <span class="dimmed" id="quarter">QUARTER</span><span id="rich" class="dimmed">OPCF</span><br>
                 <span class="dimmed" id="twenty">TWENTY</span><span class="dimmed" id="five">FIVE</span><span class="dimmed">X</span><br>
@@ -22,12 +21,15 @@
                 <span class="dimmed" id="hour_4">FOUR</span><span class="dimmed" id="hour_5">FIVE</span><span class="dimmed" id="hour_2">TWO</span><br>
                 <span class="dimmed" id="hour_8">EIGHT</span><span class="dimmed" id="hour_11">ELEVEN</span><br>
                 <span class="dimmed" id="hour_7">SEVEN</span><span class="dimmed" id="hour_12">TWELVE</span><br>
-                <span class="dimmed" id="hour_10"><a href="testIndex.html">T</a>EN</span><span class="dimmed">SE</span><span id="oclock" class="dimmed">OCLOCK</span><br>
+                <span class="dimmed" id="hour_10">TEN</span><span class="dimmed">SE</span><span id="oclock" class="dimmed">OCLOCK</span><br>
             </div>
         </div>
     </div>
 </div>
-<img id="changeBackground" class="cog" src="imgs/cog.png" >
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.0.0.js"></script>
   <script src="JS/objectjs.js"></script>
+  <script src="JS/test.js"></script>
 </body>
 </html>
