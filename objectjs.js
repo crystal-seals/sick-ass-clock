@@ -10,8 +10,8 @@ function updateTime(){
 function correctHours(input){
   if (input.m > 34) {
     input.h ++;
-    input.h = input.h % 12 || 12;
   }
+  input.h = input.h % 12 || 12;
   return input;
 }
 
