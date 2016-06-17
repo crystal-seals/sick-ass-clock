@@ -74,7 +74,7 @@ function updateBackground(input) {
   document.getElementById('pattern').style.background = "rgba(" + middle + ") url(pattern.png)";
 }
 
-var run = function update(){
+var run = function(){
     var time = updateTime();
     var correctTime = correctHours(time);
     var hourStr = hourString(correctTime);
