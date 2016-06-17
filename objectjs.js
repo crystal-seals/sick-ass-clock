@@ -1,5 +1,5 @@
 var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock', 'to']
-var test = {h:"hour_10", m:16, s:34};
+var test = {h:12, m:36, s:34};
 
 function updateTime(){
   var today = new Date();
@@ -10,8 +10,8 @@ function updateTime(){
 function correctHours(input){
   if (input.m > 34) {
     input.h ++;
+    input.h = input.h % 12 || 12;
   }
-  input.h = input.h % 12 || 12;
   return input;
 }
 
@@ -62,7 +62,7 @@ function setClock(input){
         document.getElementById('half').className= "highlighted";
     }
 }
-
+//updates backround pattern darkness to go darker when the minutes are about to change
 function updateBackground(input) {
   var remainderMinutes = input.m % 5;
   var secondsPassed = (remainderMinutes * 60) + input.s;
@@ -71,7 +71,7 @@ function updateBackground(input) {
     fraction = (300 - (secondsPassed)) / 300;
   }
   var middle = "0,0,0," + (0.8 - (fraction * 0.6));
-  document.getElementById('pattern').style.background = "rgba(" + middle + ") url(pattern.png)";
+  document.getElementById('pattern').style.background = "rgba(" + middle + ") url(imgs/pattern.png)";
 }
 
 var run = function(){
@@ -150,7 +150,7 @@ document.getElementById("changeBackground").addEventListener("click", function c
   if (number === 9) {
     number = 1;
   }
-  document.getElementById('background').style.backgroundImage = "url(" + number + ".jpg)";
+  document.getElementById('background').style.backgroundImage = "url(imgs/" + number + ".jpg)";
   document.getElementById('changeBackground').className = "button";
   setTimeout(function(){
     document.getElementById('changeBackground').className = "cog";
