@@ -1,5 +1,5 @@
 var wordsArr = ['quarter', 'twenty', 'five', 'half', 'ten', 'past', 'oclock', 'to']
-var test = {h:12, m:36, s:34};
+var test = {h:"hour_10", m:16, s:34};
 
 function updateTime(){
   var today = new Date();
@@ -10,8 +10,8 @@ function updateTime(){
 function correctHours(input){
   if (input.m > 34) {
     input.h ++;
-    input.h = input.h % 12 || 12;
   }
+  input.h = input.h % 12 || 12;
   return input;
 }
 

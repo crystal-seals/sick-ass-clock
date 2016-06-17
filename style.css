@@ -52,6 +52,11 @@ body{
   justify-content: center;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 span {
   letter-spacing: 3.5vw;
   font-size: 7vh;
