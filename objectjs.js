@@ -88,49 +88,58 @@ var run = function update(){
 
 var interval = setInterval(run, 1000);
 
+//1 if clicked, 0 if off
+var secretXon = 0;
+
 //Secret function that reveals names by pressing x
 document.getElementById("ex").addEventListener("click", function secretEx() {
-    clearInterval(interval);
-    document.getElementById('sofia').className = 'highlighted';
-    document.getElementById('rich').className = 'highlighted';
-    document.getElementById('it').className = 'dimmed';
-    document.getElementById('is').className = 'dimmed';
-    dimHours();
-    dimMinutes();
-    setTimeout(function() {
-      document.getElementById('sofia').className = 'dimmed';
-      document.getElementById('rich').className = 'dimmed';
-      document.getElementById('rich').innerHTML = 'VERY';
-      document.getElementById('rich').className = 'highlighted';
-    }, 3000)
-    setTimeout(function() {
-      document.getElementById('sofia').className = 'dimmed';
-      document.getElementById('rich').className = 'dimmed';
-      document.getElementById('rich').innerHTML = 'COOL';
-      document.getElementById('rich').className = 'highlighted';
-    }, 4000)
-    setTimeout(function() {
-      document.getElementById('sofia').className = 'dimmed';
-      document.getElementById('rich').className = 'dimmed';
-      document.getElementById('sofia').innerHTML = 'CLOCK';
+    if (secretXon === 0) {
+      secretXon = 1;
+      clearInterval(interval);
       document.getElementById('rich').innerHTML = 'RICH';
-      document.getElementById('sofia').className = 'highlighted';
-    }, 5000)
-    setTimeout(function() {
-      document.getElementById('sofia').className = 'dimmed';
-      document.getElementById('rich').className = 'dimmed';
       document.getElementById('sofia').innerHTML = 'SOFIA';
-      document.getElementById('rich').innerHTML = 'YEAH';
+      document.getElementById('sofia').className = 'highlighted';
       document.getElementById('rich').className = 'highlighted';
-    }, 6000)
-    setTimeout(function() {
-      document.getElementById('rich').innerHTML = 'RICH';
-        document.getElementById('it').className = 'highlighted';
-        document.getElementById('is').className = 'highlighted';
+      document.getElementById('it').className = 'dimmed';
+      document.getElementById('is').className = 'dimmed';
+      dimHours();
+      dimMinutes();
+      setTimeout(function() {
         document.getElementById('sofia').className = 'dimmed';
         document.getElementById('rich').className = 'dimmed';
-        interval = setInterval(run, 1000);
-    }, 7500)
+        document.getElementById('rich').innerHTML = 'VERY';
+        document.getElementById('rich').className = 'highlighted';
+      }, 3000)
+      setTimeout(function() {
+        document.getElementById('sofia').className = 'dimmed';
+        document.getElementById('rich').className = 'dimmed';
+        document.getElementById('rich').innerHTML = 'COOL';
+        document.getElementById('rich').className = 'highlighted';
+      }, 4000)
+      setTimeout(function() {
+        document.getElementById('sofia').className = 'dimmed';
+        document.getElementById('rich').className = 'dimmed';
+        document.getElementById('sofia').innerHTML = 'CLOCK';
+        document.getElementById('rich').innerHTML = 'RICH';
+        document.getElementById('sofia').className = 'highlighted';
+      }, 5000)
+      setTimeout(function() {
+        document.getElementById('sofia').className = 'dimmed';
+        document.getElementById('rich').className = 'dimmed';
+        document.getElementById('sofia').innerHTML = 'STIME';
+        document.getElementById('rich').innerHTML = 'YEAH';
+        document.getElementById('rich').className = 'highlighted';
+      }, 6000)
+      setTimeout(function() {
+        document.getElementById('rich').innerHTML = 'OPCF';
+          document.getElementById('it').className = 'highlighted';
+          document.getElementById('is').className = 'highlighted';
+          document.getElementById('sofia').className = 'dimmed';
+          document.getElementById('rich').className = 'dimmed';
+          interval = setInterval(run, 1000);
+          secretXon = 0;
+      }, 7500)
+    };
 });
 
 // Backround image change by pressing the cog
