@@ -1,4 +1,4 @@
-# sick-ass-clock
+# Sick Ass O'clock
 
 This is the going to be the coolest clock EVER. Like, imagine normal clocks, boring right? This is not a normal clock. This is possibly the coolest clock ever invented.
 
